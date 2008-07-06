@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2284
+
+Syntax highlighting for the CUP parser generator, an LALR parser generator for JAVA. See http://www.cs.princeton.edu/~appel/modern/java/CUP/
+
+The latest version can be found at http://www.trapdoor.org/projects/4
+
+Patches are welcome.
