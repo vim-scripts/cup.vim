@@ -7,16 +7,16 @@
 
 " Quit when a syntax file was already loaded	{{{
 if exists("b:current_syntax")
-	finish
+    finish
 endif
 "}}}
 
 " Include java syntax {{{
 if version >= 600
-	runtime! syntax/java.vim
-	unlet b:current_syntax 
+    runtime! syntax/java.vim
+    unlet b:current_syntax 
 else
-	so $VIMRUNTIME/syntax/java.vim
+    so $VIMRUNTIME/syntax/java.vim
 endif
 "}}}
 
@@ -26,8 +26,8 @@ syn region cupStart start="" end="" contains=@cupOptions
 
 
 syn match cupTerm "\<[A-Z]\+\>" contained
-syn match cupNonTerm "\<[a-z][A-Z, a-z]\+\>" contained
-syn match cupNonTermDef "^[a-z][A-Z, a-z]\+\>" contained
+syn match cupNonTerm "\<[a-z][A-Za-z]\+\>" contained
+syn match cupNonTermDef "^[a-z][A-Za-z]\+\>" contained
 syn match cupClass "\<[A-Z][a-z]\+\>" contained
 
 syn match cupDef "^package.*$" contained
