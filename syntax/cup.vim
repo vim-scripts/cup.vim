@@ -40,7 +40,7 @@ syn match cupDef "^non terminal" contained
 syn match cupDef "^nonterminal" contained
 syn match cupDef "^start with" contained
 
-syn region cupVarLabel matchgroup=cupVarLabelMark start=":" end="\s" contains=cupVar contained
+syn region cupVarLabel matchgroup=cupVarLabelMark start=":" end="\>" contains=cupVar contained
 syn match cupVar "[a-z][A-Z, a-z]\+\>" contained
 
 syn match cupOperator "::=" contained
