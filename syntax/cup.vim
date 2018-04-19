@@ -32,13 +32,16 @@ syn match cupClass "\<[A-Z][a-z]\+\>" contained
 
 syn match cupDef "^package.*$" contained
 syn match cupDef "^import.*$" contained
-syn match cupDef "^precedence left" contained
-syn match cupDef "^precedence right" contained
-syn match cupDef "^precedence nonassoc" contained
-syn match cupDef "^terminal" contained
-syn match cupDef "^non terminal" contained
-syn match cupDef "^nonterminal" contained
-syn match cupDef "^start with" contained
+syn match cupDef "\<left\>" contained
+syn match cupDef "\<right\>" contained
+syn match cupDef "\<precedence\>" contained
+syn match cupDef "\<terminal\>" contained
+syn match cupDef "\<non\>" contained
+
+syn match cupDef "\<nonterminal\>" contained
+syn match cupDef "\<start\>" contained
+syn match cupDef "\<init\>" contained
+syn match cupDef "\<with\>" contained
 
 syn region cupVarLabel matchgroup=cupVarLabelMark start=":" end="\>" contains=cupVar contained
 syn match cupVar "[a-z][A-Z, a-z]\+\>" contained
