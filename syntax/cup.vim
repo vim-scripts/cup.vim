@@ -44,7 +44,7 @@ syn match cupDef "\<init\>" contained
 syn match cupDef "\<with\>" contained
 
 syn region cupVarLabel matchgroup=cupVarLabelMark start=":" end="\>" contains=cupVar contained
-syn match cupVar "[a-z][A-Za-z]\+\>" contained
+syn match cupVar "[A-Za-z0-9]\+\>" contained
 
 syn match cupOperator "::=" contained
 syn match cupOperator "|" contained
