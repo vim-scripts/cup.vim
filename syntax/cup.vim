@@ -60,10 +60,12 @@ syn match cupComment "//.*" contained
 syn region cupComment start="/\*" end="\*/" contained contains=cupComment
 
 " action code (only after states braces and macro use)
-syn region cupActionCode matchgroup=Delimiter start="{:" end=":}" contained contains=@javaTop,cupJavaBraces
+syn region cupActionCode matchgroup=Delimiter start="{:" end=":}" contained contains=@javaTop,cupJavaBraces,cupResult
 
 " keep braces in actions balanced
 syn region cupJavaBraces start="{" end="}" contained contains=@javaTop,cupJavaBraces
+
+syn match cupResult "\<RESULT\>" contained
 
 " syncing
 syn sync clear
@@ -84,5 +86,6 @@ hi link cupVar      Label
 hi link cupClass      Type
 " hi cupSectionSep guifg=yellow ctermfg=yellow guibg=blue ctermbg=blue gui=bold cterm=bold
 hi link cupCodeIncludeMark Delimiter
+hi link cupResult Identifier
 
 let b:current_syntax="cup"
